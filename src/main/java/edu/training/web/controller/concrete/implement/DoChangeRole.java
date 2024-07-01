@@ -47,32 +47,3 @@ public class DoChangeRole implements Command {
 		}
 	}
 }
-//public class DoChangeRole implements Command {
-//
-//	private static final Object ADMIN = null;
-//	private final UserService userService = ServiceProvider.getInstance().getUserService();
-//
-//    @Override
-//    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//
-//
-//        String login = request.getParameter("login");
-//        String newRole = request.getParameter("newRole");
-//        User user = (User) request.getSession().getAttribute("user");
-//        UserRole role = user.getRole();
-//        if (role.equals(ADMIN)) {
-//            try {
-//                if (userService.changeRole(login, newRole)) {
-//                    response.sendRedirect("Controller?command=go_to_main_page&Info=Role changed succesfully");
-//                } else {
-//                    response.sendRedirect("Controller?command=go_to_main_page&Info=Change error");
-//                }
-//            } catch (ServiceException e) {
-//            	e.printStackTrace();
-//                response.sendRedirect("Controller?command=go_to_main_page&Info=error");
-//            }
-//        }else {
-//            response.sendRedirect("Controller?command=go_to_start_page&Info=No rights");
-//        }
-//    }
-//}
